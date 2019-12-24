@@ -18,3 +18,4 @@ build/
 *.iml
 local.properties
 projcet.properties
+/projcet.properties

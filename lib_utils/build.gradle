@@ -34,7 +34,6 @@ dependencies {
 }
 
 
-
 def baseUrl = 'https://github.com/tangnuo'
 //项目主页
 def siteUrl = baseUrl
@@ -42,14 +41,9 @@ def siteUrl = baseUrl
 def gitUrl = "${baseUrl}/Lib_Demo"
 def issueUrl = "${baseUrl}/issues"
 
-//发布到组织名称名字，必须填写
-//（com.ssy.fireworkstextview）这样写是不好的，项目名会拼上去
-//我手欠然后最后就是这样了，大家引以为戒
-//compile 'com.ssy.fireworkstextview:fireworkstextview:1.0.0'
 group = "com.caowj.library"
 // 版本号，下次更新是只需要更改版本号即可
 version = "1.0.0"
-//上面配置后上传至JCenter后的编译路径是这样的： compile 'me.songning.CircleView:library:1.0.0'
 
 //生成源文件
 task sourcesJar(type: Jar) {
@@ -103,7 +97,7 @@ install {
                         //开发者的个人信息
                         id 'tangnuo'
                         name 'tangnuo'
-                        email 'caowj1104@gmail.com'
+                        email 'caowj1104@163.com'
                     }
                 }
                 scm {
@@ -116,10 +110,12 @@ install {
     }
 }
 
-bintray {
-    user = BINTRAY_USER
-    key = BINTRAY_KEY
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
+bintray {
+    user = properties.getProperty("BINTRAY_USER")
+    key = properties.getProperty("BINTRAY_KEY")
     configurations = ['archives']
 
     //    https://bintray.com/caowj/maven

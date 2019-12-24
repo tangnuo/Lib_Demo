@@ -10,7 +10,7 @@ public class SdCardUtil {
 
     /**
      * SD 是否启用
-     * @return true:启用  <br/> fasle:disabled
+     * @return true:启用
      */
     public static boolean isSDCardEnableByEnvironment() {
         return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState());

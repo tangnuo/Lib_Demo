@@ -9,7 +9,7 @@ android {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
 
     buildTypes {
@@ -27,3 +27,6 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion"
     implementation "com.android.support:support-annotations:$rootProject.supportVersion"
 }
+
+//加在最后面
+apply from: "../bintray.gradle"

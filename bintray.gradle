@@ -21,6 +21,10 @@ if (projectPropertiesFile.exists()) {
     properties.load(projectPropertiesFile.newDataInputStream())
 }
 
+if (!properties.hasProperty("project.name")) {
+    println("===>请检查project.properties配置信息")
+    return
+}
 // read properties
 def projectGroup = properties.getProperty("project.group")
 def projectName = properties.getProperty("project.name")

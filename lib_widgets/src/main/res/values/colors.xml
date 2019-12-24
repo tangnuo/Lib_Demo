@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#007AFF</color>
+    <!-- 背景 半透明黑 -->
+    <color name="bg_alpha_60">#60000000</color>
+    <color name="bg_alpha_c0">#c0000000</color>
+    <!-- 背景 透明白 -->
+    <color name="bg_alpha_white_20">#a0ffffff</color>
+    <!-- 全透明 -->
+    <color name="bg_transparent">#00000000</color>
+
+    <color name="black">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="theme_color">#007AFF</color>
+
+    <!-- 字体颜色-->
+    <color name="text_hint">#AAAAAA</color>
+    <color name="text_gray999">#999999</color>
+    <color name="text_gray666">#666666</color>
+    <color name="text_light_gray">#99a0a8</color>
+    <color name="text_orange">#FB4913</color>
+    <color name="text_purple">#677DB1</color>
+    <color name="text_yellow">#E1A018</color>
+    <color name="text_green">#29AF74</color>
+    <color name="text_orange2">#FF7316</color>
+
+    <!-- 背景颜色 -->
+    <color name="bg_gray">#F5F8FC</color>
+    <color name="bg_light_blue">#58A8FF</color>
+    <color name="cl_ea">#EAEAEA</color>
+    <color name="cl_e0">#E0E0E0</color>
+    <color name="cl_00">#000000</color>
+    <color name="bg_light_blue1">#EAF4FF</color>
+    <color name="bg_light_yellow">#FFF2D7</color>
+    <color name="bg_light_light_blue">#E0EFFF</color>
+    <color name="bg_light_green">#DDFFF0</color>
+    <color name="bg_light_orange">#FFEBDE</color>
+    <color name="bg_light_blue2">#91C4FD</color>
+
+    <!-- 分割线颜色 -->
+    <color name="line_gray">#E0E0E0</color>
+    <color name="line_gray_ef">#EFEFEF</color>
+
+    <!--车辆状态背景和字体颜色-->
+    <color name="bg_state_1">#DCFFF0</color>
+    <color name="text_state_1">#1db072</color>
+
+    <color name="bg_state_2">#dfefff</color>
+    <color name="text_state_2">#0076ff</color>
+
+    <color name="bg_state_3">#fff2d6</color>
+    <color name="text_state_3">#e2a100</color>
+
+    <color name="bg_state_4">#ffebdd</color>
+    <color name="text_state_4">#ff7300</color>
+
+    <color name="bg_state_5">#ffefef</color>
+    <color name="text_state_5">#ff1e10</color>
+    <color name="cl_66">#666666</color>
+    <color name="cl_d5">#d5d5d5</color>
+
+    <!--时间范围选择-->
+    <color name="normal_day">#ff999999</color>
+    <color name="selected_day_background">#FC7347</color>
+    <color name="selected_day_text">#fff2f2f2</color>
+</resources>

@@ -10,29 +10,29 @@ def gitUrl = "${siteUrl}/Lib_Demo"
 def issueUrl = "${gitUrl}/issues"
 
 // load properties
-Properties properties = new Properties()
+Properties prop = new Properties()
 File localPropertiesFile = project.rootProject.file("local.properties")//根目录
 //File localPropertiesFile = project.file("local.properties")//相同目录
 if (localPropertiesFile.exists()) {
-    properties.load(localPropertiesFile.newDataInputStream())
+    prop.load(localPropertiesFile.newDataInputStream())
 }
 File projectPropertiesFile = project.rootProject.file("project.properties");
 if (projectPropertiesFile.exists()) {
-    properties.load(projectPropertiesFile.newDataInputStream())
+    prop.load(projectPropertiesFile.newDataInputStream())
 }
 
-if (!properties.hasProperty("project.name")) {
+if (!prop.containsKey("project.name")) {
     println("===>请检查project.properties配置信息")
     return
 }
 // read properties
-def projectGroup = properties.getProperty("project.group")
-def projectName = properties.getProperty("project.name")
-def projectDesc = properties.getProperty("project.desc")
+def projectGroup = prop.getProperty("project.group")
+def projectName = prop.getProperty("project.name")
+def projectDesc = prop.getProperty("project.desc")
 def projectVersionName = android.defaultConfig.versionName//使用module的versionName
 
-def bintrayUser = properties.getProperty("bintray.user")
-def bintrayApikey = properties.getProperty("bintray.apikey")
+def bintrayUser = prop.getProperty("bintray.user")
+def bintrayApikey = prop.getProperty("bintray.apikey")
 
 group = projectGroup
 // 版本号，下次更新是只需要更改版本号即可
@@ -104,7 +104,9 @@ task androidSourcesJar(type: Jar) {
 if (JavaVersion.current().isJava8Compatible()) {
     allprojects {
         tasks.withType(Javadoc) {
+            //去掉javadoc检查：
             options.addStringOption('Xdoclint:none', '-quiet')
+            options.addStringOption('encoding', 'UTF-8')
         }
     }
 }

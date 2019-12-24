@@ -17,5 +17,5 @@
 build/
 *.iml
 local.properties
-projcet.properties
-/projcet.properties
+project.properties
+/project.properties

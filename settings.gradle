@@ -1,2 +1,3 @@
 include ':app', ':lib_utils', ':lib_widgets', ':lib_logs', ':lib_network'
 rootProject.name='Lib_Demo'
+include ':banner'

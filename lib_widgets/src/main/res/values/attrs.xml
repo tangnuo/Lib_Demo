@@ -8,4 +8,12 @@
         <attr name="right_bottom_radius" format="dimension" />
         <attr name="left_bottom_radius" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="AutoBanner">
+        <attr format="reference" name="inAnim"/>
+        <attr format="reference" name="outAnim"/>
+        <attr format="integer" name="time_interval"/>
+        <attr format="color|reference" name="indicator_focus_color"/>
+        <attr format="color|reference" name="indicator_color"/>
+    </declare-styleable>
 </resources>

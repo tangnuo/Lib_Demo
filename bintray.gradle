@@ -9,7 +9,7 @@ def siteUrl = 'https://github.com/tangnuo'
 def gitUrl = "${siteUrl}/Lib_Demo"
 def issueUrl = "${gitUrl}/issues"
 
-// load properties
+// load properties配置文件
 Properties prop = new Properties()
 File localPropertiesFile = project.rootProject.file("local.properties")//根目录
 //File localPropertiesFile = project.file("local.properties")//相同目录
@@ -25,7 +25,7 @@ if (!prop.containsKey("project.name")) {
     println("===>请检查project.properties配置信息")
     return
 }
-// read properties
+// read properties配置信息
 def projectGroup = prop.getProperty("project.group")
 def projectName = prop.getProperty("project.name")
 def projectDesc = prop.getProperty("project.desc")
@@ -40,12 +40,13 @@ version = projectVersionName
 
 // This generates POM.xml with proper parameters
 install {
+    //1、定义pom并打包aar
     repositories.mavenInstaller {
         pom.project {
             name projectName
             version projectVersionName // 版本号，下次更新是只需要更改版本号即可
             packaging 'aar'
-            //项目描述，随意填
+            //项目描述，可随意填
             description projectDesc
             url siteUrl
 
@@ -73,7 +74,7 @@ install {
     }
 }
 
-//生成Javadoc文档
+//2、生成Javadoc文档
 task androidJavadocs(type: Javadoc) {
     source = android.sourceSets.main.java.source
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
@@ -89,13 +90,13 @@ task androidJavadocs(type: Javadoc) {
     }
 }
 
-//文档打包成jar
+//3、文档打包成jar
 task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
     from androidJavadocs.destinationDir
     classifier = 'javadoc'
 }
 
-//生成源文件
+//4、生成源文件
 task androidSourcesJar(type: Jar) {
     from android.sourceSets.main.java.source
     classifier = 'sources'
@@ -123,11 +124,11 @@ bintray {
     key = bintrayApikey
     configurations = ['archives']
 
-    //上传后的地址：https://bintray.com/caowj/maven
+    //上传后的地址：https://bintray.com/caowj/LibRepo
     pkg {
         userOrg = "caowj" //自己创建的organization名称，一定要全是小写字母，即使当时创建的名称含有大写，这里全部转换为小写，否则404
-        repo = "maven"//自己创建的仓库名称， ‘caowj’这个organization下，必须在网页上创建成功，否则还是无法找到 repo
-        name = projectName //发布到JCenter上的项目名字
+        repo = "LibRepo"//自己创建的仓库名称， ‘caowj’这个organization下，必须在网页上创建成功，否则还是无法找到 repo
+        name = projectName //发布到JCenter上的项目名字；//最终引用形式：implementation group:name:version
         desc = projectDesc // 项目描述
         websiteUrl = siteUrl
         issueTrackerUrl = issueUrl

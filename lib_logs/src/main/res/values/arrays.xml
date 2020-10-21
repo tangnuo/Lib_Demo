@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="logType">
+        <item >全部</item>
+        <item >业务日志</item>
+        <item >网络日志</item>
+        <item >logcat日志</item>
+    </string-array>
+</resources>

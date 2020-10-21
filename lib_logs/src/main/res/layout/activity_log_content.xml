@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="back"
+            android:paddingHorizontal="10dp"
+            android:src="@mipmap/lib_log_back" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="查看"
+            android:textColor="#ffffff"
+            android:textSize="20sp"></TextView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lib_log_search_bar_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:src="@mipmap/lib_log_ic_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+
+                android:layout_width="0px"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="多个关键字通过空格隔开"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#788096"
+                android:textSize="14sp" />
+
+            <ImageView
+
+                android:id="@+id/iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="6dp"
+                android:src="@mipmap/lib_log_ic_search_clear"
+                android:onClick="clearKeywords"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:layout_marginLeft="10dp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="search"
+            android:text="搜索"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <!--    <android.support.v7.widget.AppCompatButton-->
+
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="测试读取文件"-->
+    <!--        android:onClick="testRead"-->
+    <!--        android:textSize="15sp" />-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+</LinearLayout>

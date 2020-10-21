@@ -202,7 +202,7 @@ public class AndroidUtils {
 
         } catch (Exception e) {
 
-            LegoLog.d("isDebug", e);
+            Log.d("isDebug", e.getMessage());
             return false;
         }
     }

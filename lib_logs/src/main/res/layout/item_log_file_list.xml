@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+   >
+
+    <TextView
+        android:paddingLeft="15dp"
+        android:id="@+id/tv_fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:text="2012-12102-sdfsdf.log" />
+    <TextView
+        android:paddingLeft="15dp"
+        android:id="@+id/tv_fileSize"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:textColor="#cccccc"
+        android:layout_toLeftOf="@+id/checkbox"
+        android:text="2012-12102-sdfsdf.log" />
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dp">
+
+    </CheckBox>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#000000" />
+</RelativeLayout>

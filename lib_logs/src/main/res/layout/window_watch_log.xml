@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+<LinearLayout
+    android:id="@+id/ll_conent"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:background="#7fffffff"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#12cccccc"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/cb_watch"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="实时监听"
+            android:checked="true"
+            />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:entries="@array/logType"
+            android:popupBackground="#cccccc"
+            android:textColor="#ff0000"
+            android:spinnerMode="dropdown"></Spinner>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_close"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="关闭"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+    <FrameLayout
+        android:id="@+id/fl_oper"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:background="#7f000000">
+
+        <ImageView
+            android:id="@+id/iv_oper"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@mipmap/lib_log_right" />
+    </FrameLayout>
+</LinearLayout>

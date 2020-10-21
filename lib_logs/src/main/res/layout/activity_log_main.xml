@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            android:onClick="back"
+            android:src="@mipmap/lib_log_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="LogTools"
+            android:textColor="#ffffff"
+            android:textSize="20sp"></TextView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/LogTypeList"
+        android:onClick="checkCrashLog">
+
+        <TextView
+            style="@style/LogItemText"
+            android:layout_height="match_parent"
+            android:text="Crash日志 " />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:id="@+id/tv_crash_num"
+            style="@style/LogItemText"
+            android:layout_alignParentRight="true"
+            android:text=" 个数："></TextView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000" />
+
+    <RelativeLayout
+        style="@style/LogTypeList"
+        android:onClick="checkBussinessLog">
+
+        <TextView
+            android:id="@+id/tv_business"
+            style="@style/LogItemText"
+            android:text="业务日志" />
+
+        <TextView
+            style="@style/LogItemRemark"
+            android:layout_below="@+id/tv_business"
+            android:text="(使用LegoLog记录的日志） " />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:id="@+id/tv_business_num"
+            style="@style/LogItemText"
+            android:layout_alignParentRight="true"
+            android:text=" 个数："></TextView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000" />
+
+    <RelativeLayout
+        style="@style/LogTypeList"
+        android:layout_height="90dp"
+        android:onClick="checkNetLog">
+
+        <TextView
+            android:id="@+id/tv_net"
+            style="@style/LogItemText"
+            android:text="网络日志" />
+      <TextView
+          style="@style/LogItemRemark"
+          android:layout_below="@+id/tv_net"
+          android:layout_toLeftOf="@+id/tv_net_num"
+          android:text="(debug模式，记录所有请求日志；release模式，只记录网络异常的log，如500,404） "
+          />
+      <TextView
+          android:layout_height="match_parent"
+          android:id="@+id/tv_net_num"
+          style="@style/LogItemText"
+          android:layout_alignParentRight="true"
+          android:text=" 个数："></TextView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000" />
+
+  <RelativeLayout
+      style="@style/LogTypeList"
+      android:onClick="checkLogcatLog">
+
+    <TextView
+        android:id="@+id/tv_logcat"
+        style="@style/LogItemText"
+        android:text="Logcat日志" />
+    <TextView
+        style="@style/LogItemRemark"
+        android:layout_below="@+id/tv_logcat"
+        android:text="(所有logcat日志，包含业务日志） "
+        />
+    <TextView
+        android:id="@+id/tv_logcat_num"
+        style="@style/LogItemText"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:text=" 个数："></TextView>
+  </RelativeLayout>
+
+  <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="显示实时窗口"
+        android:onClick="showRealTimeWindow"
+        android:textSize="15sp" />
+
+</LinearLayout>

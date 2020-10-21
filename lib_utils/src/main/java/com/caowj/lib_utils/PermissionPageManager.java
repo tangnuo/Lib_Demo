@@ -40,7 +40,7 @@ public class PermissionPageManager {
 
     public void jumpPermissionActivity() {
         String name = Build.MANUFACTURER;
-        LegoLog.i(TAG, "jumpPermissionPage --- name : " + name);
+        Log.i(TAG, "jumpPermissionPage --- name : " + name);
         switch (name) {
             case "HUAWEI":
                 goHuaWeiManager();
@@ -137,7 +137,7 @@ public class PermissionPageManager {
 
     private void goXiaoMiManager() {
         String rom = getMiuiVersion();
-        LegoLog.i(TAG, "goMiaoMiMainager --- rom : " + rom);
+        Log.i(TAG, "goMiaoMiMainager --- rom : " + rom);
         Intent intent = new Intent();
         if ("V6".equals(rom) || "V7".equals(rom)) {
             try {

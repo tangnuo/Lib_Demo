@@ -65,4 +65,5 @@
     <color name="normal_day">#ff999999</color>
     <color name="selected_day_background">#FC7347</color>
     <color name="selected_day_text">#fff2f2f2</color>
+    <color name="crash_dialog_btn_bg_p">#fff0f0f0</color>
 </resources>

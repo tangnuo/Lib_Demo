@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -18,7 +19,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
 
+//        kotlinOptions.freeCompilerArgs += ['-module-name', "$REPOSITORY_GROUP.$libArtifact"]
+    }
 }
 
 dependencies {
@@ -26,6 +32,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$rootProject.supportVersion"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion"
     implementation "com.android.support:support-annotations:$rootProject.supportVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${rootProject.kotlin_version}"
     implementation project(path: ':lib_utils')
 }
 

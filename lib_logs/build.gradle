@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+//apply plugin: 'org.jetbrains.dokka-android'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -23,6 +24,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
+        // https://deskid.github.io/2019/03/05/about-kotlin-module/
+//        kotlinOptions.freeCompilerArgs += ['-module-name', "$REPOSITORY_GROUP.$libArtifact"]
     }
 
 }

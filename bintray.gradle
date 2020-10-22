@@ -39,109 +39,6 @@ group = projectGroup
 // 版本号，下次更新是只需要更改版本号即可
 version = projectVersionName
 
-////2、生成Javadoc文档
-//task androidJavadocs(type: Javadoc) {
-//    source = android.sourceSets.main.java.source
-//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-//
-//    //如果你的项目里面有中文注释的话，必须将格式设置为UTF-8，不然会出现乱码
-//    options {
-//        encoding "UTF-8"
-//        charSet 'UTF-8'
-//        author true
-//        version projectVersionName
-//        links "http://docs.oracle.com/javase/7/docs/api"
-//        title projectName
-//    }
-//}
-//
-//task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
-//    outputFormat = "javadoc"
-//    outputDirectory = javadoc.destinationDir
-//}
-//
-////3、文档打包成jar
-//task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs,dokkaJavadoc) {
-//    from androidJavadocs.destinationDir
-//    classifier = 'javadoc'
-//}
-//
-////4、生成源文件
-//task androidSourcesJar(type: Jar) {
-//    from android.sourceSets.main.java.source
-//    classifier = 'sources'
-//}
-//
-////5、生成Kotlin代码文档
-////task dokkaJavaDoc(type: org.jetbrains.dokka.gradle.DokkaTask){
-////    outputFormat = 'javadoc'
-////    outputDirectory = "$buildDir/javadoc"
-////    jdkVersion = 8
-////    skipDeprecated = true
-////}
-//
-//
-//
-////task generateJavadoc(type: Jar, dependsOn: dokkaJavadoc) {
-////    group = 'jar'
-////    classifier = 'javadoc'
-////    from javadoc.destinationDir
-////}
-//
-//if (JavaVersion.current().isJava8Compatible()) {
-//    allprojects {
-//        tasks.withType(Javadoc) {
-//            //去掉javadoc检查：
-//            options.addStringOption('Xdoclint:none', '-quiet')
-//            options.addStringOption('encoding', 'UTF-8')
-//        }
-//    }
-//}
-//
-////上传到JCenter所需要的源码文件
-//artifacts {
-//    archives androidSourcesJar
-//    archives androidJavadocsJar
-//}
-
-task generateSourcesJar(type: Jar) {
-    group = 'jar'
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-//task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
-//    outputFormat = 'javadoc'
-//    outputDirectory = javadoc.destinationDir
-//}
-//
-//task generateJavadoc(type: Jar, dependsOn: dokkaJavadoc) {
-//    group = 'jar'
-//    classifier = 'javadoc'
-//    from javadoc.destinationDir
-//}
-
-artifacts {
-//    archives generateJavadoc //javadocJar//    archives javadocJar
-    archives generateSourcesJar //sourcesJar    //    archives sourcesJar
-}
-
-
 // This generates POM.xml with proper parameters
 install {
     //1、定义pom并打包aar
@@ -176,6 +73,58 @@ install {
             }
         }
     }
+}
+
+//2、生成Javadoc文档
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+
+    //如果你的项目里面有中文注释的话，必须将格式设置为UTF-8，不然会出现乱码
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true
+        version projectVersionName
+        links "http://docs.oracle.com/javase/7/docs/api"
+        title projectName
+    }
+}
+
+//3、使用dokka生成kotlin文档
+task dokkaJavadoc(type: dokka.getClass()) {
+    outputFormat = "javadoc"
+    outputDirectory = javadoc.destinationDir
+}
+
+//4、文档打包成jar
+task generateJavadoc(type: Jar, dependsOn: dokkaJavadoc) {
+    group = 'jar'
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+//5、生成源文件
+task generateSourcesJar(type: Jar) {
+    group = 'jar'
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            //去掉javadoc检查：
+            options.addStringOption('Xdoclint:none', '-quiet')
+            options.addStringOption('encoding', 'UTF-8')
+        }
+    }
+}
+
+//上传到JCenter所需要的源码文件
+artifacts {
+    archives generateJavadoc
+    archives generateSourcesJar
 }
 
 // bintray configuration

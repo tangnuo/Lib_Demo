@@ -31,7 +31,7 @@ def projectGroup = prop.getProperty("project.group")
 def projectName = prop.getProperty("project.name")
 def projectDesc = prop.getProperty("project.desc")
 def projectVersionName = android.defaultConfig.versionName//使用module的versionName
-
+println("===>当前上传的项目是：" + projectName)
 def bintrayUser = prop.getProperty("bintray.user")
 def bintrayApikey = prop.getProperty("bintray.apikey")
 

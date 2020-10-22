@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-//apply plugin: 'org.jetbrains.dokka-android'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -11,7 +10,7 @@ android {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
     }
 
     buildTypes {
@@ -59,7 +58,7 @@ apply from: "../bintray.gradle"
 //
 //group = "com.caowj.library"
 //// 版本号，下次更新是只需要更改版本号即可
-//version = "1.0.0"
+//version = "0.0.1"
 //
 ////生成源文件
 //task sourcesJar(type: Jar) {

@@ -95,6 +95,17 @@ task javadoc(type: Javadoc) {
 task dokkaJavadoc(type: dokka.getClass()) {
     outputFormat = "javadoc"
     outputDirectory = javadoc.destinationDir
+
+//    configuration {
+//        externalDocumentationLink {
+////            noJdkLink = true
+//            noStdlibLink = true
+////            noAndroidSdkLink = true
+//
+//            url = new URL("https://www.baidu.com")
+//            packageListUrl = new URL("file:///${rootDir}/package-list")
+//        }
+//    }
 }
 
 //4、文档打包成jar
@@ -121,9 +132,9 @@ if (JavaVersion.current().isJava8Compatible()) {
     }
 }
 
-//上传到JCenter所需要的源码文件
+//上传到JCenter所需要的源码文件和文档
 artifacts {
-    archives generateJavadoc
+//    archives generateJavadoc//因为网络问题，暂时先不上传文档。
     archives generateSourcesJar
 }
 

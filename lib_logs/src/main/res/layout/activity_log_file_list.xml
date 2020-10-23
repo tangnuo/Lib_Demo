@@ -12,7 +12,6 @@
         android:background="#000000">
 
         <ImageView
-            android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingHorizontal="10dp"
@@ -30,7 +29,6 @@
             android:textSize="20sp"></TextView>
 
         <TextView
-            android:id="@+id/tv_del"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_toLeftOf="@+id/tv_selectAll"

@@ -56,7 +56,6 @@
 
 </LinearLayout>
     <FrameLayout
-        android:id="@+id/fl_oper"
         android:layout_width="20dp"
         android:layout_height="match_parent"
         android:background="#7f000000">

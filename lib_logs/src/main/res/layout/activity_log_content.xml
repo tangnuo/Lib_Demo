@@ -12,7 +12,6 @@
         android:background="#000000">
 
         <ImageView
-            android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:onClick="back"
@@ -53,7 +52,6 @@
             <ImageView
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"
-                android:id="@+id/iv_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -80,7 +78,6 @@
 
             <ImageView
 
-                android:id="@+id/iv_clear"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"

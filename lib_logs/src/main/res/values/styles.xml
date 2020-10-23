@@ -1,11 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="LibActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
     <style name="LogTypeList">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/logTypeList_height</item>

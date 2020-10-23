@@ -23,7 +23,6 @@
     </ScrollView>
 
     <View
-        android:id="@+id/v_horizontal_divider"
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="#D2D3D5"/>
@@ -44,7 +43,6 @@
         <View
             android:layout_width="1px"
             android:layout_height="match_parent"
-            android:id="@+id/v_vertical_divider"
             android:background="#D2D3D5" />
         <TextView
             android:id="@+id/btn_checkLog"

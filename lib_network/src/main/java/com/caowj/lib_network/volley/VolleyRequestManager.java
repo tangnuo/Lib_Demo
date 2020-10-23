@@ -6,6 +6,7 @@ import com.caowj.lib_network.interfaces.IRequestManager;
 
 /**
  * 采用Volley请求网络
+ * 具体封装使用请参考百度云：【Lib_kedacom_vnet】
  */
 public class VolleyRequestManager implements IRequestManager {
     private static VolleyRequestManager VOLLEY_REQUEST_MANAGER;
@@ -13,6 +14,7 @@ public class VolleyRequestManager implements IRequestManager {
         if (VOLLEY_REQUEST_MANAGER == null) {
             VOLLEY_REQUEST_MANAGER = new VolleyRequestManager();
         }
+        // TODO: 2020/10/23 具体封装使用请参考百度云：【Lib_kedacom_vnet】 
         return VOLLEY_REQUEST_MANAGER;
     }
 

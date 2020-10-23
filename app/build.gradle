@@ -39,6 +39,7 @@ dependencies {
 //    implementation project(path: ':lib_logs')
 //    implementation project(path: ':lib_widgets')
     implementation project(path: ':lib_network')
+    implementation project(path: ':lib_imageloader')
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

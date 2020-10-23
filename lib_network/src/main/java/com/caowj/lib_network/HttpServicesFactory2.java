@@ -7,9 +7,6 @@ import android.util.LruCache;
 import com.caowj.lib_network.net.HttpServiceApi;
 import com.caowj.lib_network.retrofit.config.HttpClient;
 
-import java.util.concurrent.TimeUnit;
-
-import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -18,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class HttpServicesFactory2 {
     private static final String BASE_URL = "https://api.apiopen.top/";
-    public static Retrofit mRetrofit;
+    private static Retrofit mRetrofit;
     private volatile static HttpServicesFactory2 servicesFactory2;
     private LruCache<String, Object> nCache = new LruCache<>(20);
 

@@ -23,9 +23,13 @@
     </declare-styleable>
 
     <declare-styleable name="CircleImageView2">
+        <!--描边粗细-->
         <attr name="civ_border_width" format="dimension" />
+        <!--描边颜色-->
         <attr name="civ_border_color" format="color" />
+        <!--覆盖色-->
         <attr name="civ_border_overlay" format="boolean" />
+        <!--填充色-->
         <attr name="civ_fill_color" format="color" />
     </declare-styleable>
 

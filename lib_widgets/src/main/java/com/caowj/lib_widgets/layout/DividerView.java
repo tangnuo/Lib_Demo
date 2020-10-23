@@ -1,4 +1,4 @@
-package com.caowj.lib_widgets.view;
+package com.caowj.lib_widgets.layout;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,7 +11,7 @@ import com.caowj.lib_widgets.R;
 
 
 /**
- * 线冒样式
+ * 分割线
  *
  * @author Heaven Cheng Created on 2018/6/29.
  */

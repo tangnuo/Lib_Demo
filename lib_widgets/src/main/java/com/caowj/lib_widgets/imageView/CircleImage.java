@@ -12,12 +12,12 @@ import com.caowj.lib_widgets.R;
 
 /**
  * <pre>
+ *     圆形图片（自定义4个角的弧度）
  *     作者：Caowj
  *     邮箱：caoweijian@kedacom.com
  *     日期：2019/12/13 13:44
  * </pre>
  */
-
 public class CircleImage extends AppCompatImageView {
 
     private int width;

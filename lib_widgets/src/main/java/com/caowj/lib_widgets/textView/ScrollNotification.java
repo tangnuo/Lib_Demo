@@ -1,4 +1,4 @@
-package com.caowj.lib_widgets.bean;/**
+package com.caowj.lib_widgets.textView;/**
  * @author Dick.Pan
  * @date 2017/10/9
  */

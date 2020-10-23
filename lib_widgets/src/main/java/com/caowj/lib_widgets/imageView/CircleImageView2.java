@@ -25,9 +25,8 @@ import com.caowj.lib_widgets.R;
 
 
 /**
- * Created by Meiji on 2016/12/21.
+ * 圆形图片（自定义描边、填充色、覆盖色）
  */
-
 public class CircleImageView2 extends AppCompatImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;

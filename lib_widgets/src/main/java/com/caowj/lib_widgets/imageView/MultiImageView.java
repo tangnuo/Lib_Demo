@@ -11,13 +11,13 @@ import android.widget.LinearLayout;
 import java.util.List;
 
 /**
+ * 宫格图控件（朋友圈）
  * @Author : Dick.Pan
  * @Date : 2018/2/26
  * https://blog.csdn.net/little762/article/details/79402970
  * <br/>
  * https://blog.csdn.net/sw5131899/article/details/52838261
  */
-
 public class MultiImageView extends LinearLayout {
 
     public static int MAX_WIDTH = 0;//控件最大宽度

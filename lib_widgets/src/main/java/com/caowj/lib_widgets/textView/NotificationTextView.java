@@ -18,8 +18,6 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.caowj.lib_widgets.bean.ScrollNotification;
-
 import java.util.List;
 
 

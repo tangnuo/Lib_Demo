@@ -1,4 +1,4 @@
-package com.caowj.lib_widgets.view;
+package com.caowj.lib_widgets.layout;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -8,9 +8,12 @@ import com.caowj.lib_network.interfaces.IRequestManager;
  * 采用Volley请求网络
  */
 public class VolleyRequestManager implements IRequestManager {
-
+    private static VolleyRequestManager VOLLEY_REQUEST_MANAGER;
     public static VolleyRequestManager getInstance() {
-        return SingletonHolder.sInstance;
+        if (VOLLEY_REQUEST_MANAGER == null) {
+            VOLLEY_REQUEST_MANAGER = new VolleyRequestManager();
+        }
+        return VOLLEY_REQUEST_MANAGER;
     }
 
     @Override
@@ -78,7 +81,4 @@ public class VolleyRequestManager implements IRequestManager {
 //        HttpRequestExampleApp.mQueue.add(request);
     }
 
-    private static class SingletonHolder {
-        private static final VolleyRequestManager sInstance = new VolleyRequestManager();
-    }
 }

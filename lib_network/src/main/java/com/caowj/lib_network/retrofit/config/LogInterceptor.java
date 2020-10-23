@@ -23,7 +23,7 @@ public class LogInterceptor implements Interceptor {
         okhttp3.MediaType mediaType = response.body().contentType();
         String content = response.body().string();
 
-//            LogUtil.myD("response body:" + content);
+//            Log.d("caowj","response body:" + content);
         if (response.body() != null) {
             ResponseBody body = ResponseBody.create(mediaType, content);
             return response.newBuilder().body(body).build();

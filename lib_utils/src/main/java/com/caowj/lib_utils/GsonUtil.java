@@ -313,12 +313,12 @@ public class GsonUtil {
     public static String getJsonData(String responseData) {
         final String START_FLAG = "<string xmlns=\"http://tempuri.org/\">";
         final String END_FLAG = "</string>";
-//        LogUtil.myD("responseData:" + responseData);
+//        Log.d("caowj","responseData:" + responseData);
 
         if (responseData != null && responseData.contains(START_FLAG)) {
             int indexS = responseData.indexOf(START_FLAG);
             int indexEnd = responseData.indexOf(END_FLAG);
-//            LogUtil.myD("indexS:" + indexS + ",indexEnd:" + indexEnd);
+//            Log.d("caowj","indexS:" + indexS + ",indexEnd:" + indexEnd);
             if (indexS >= 0 && indexEnd >= indexS) {
                 responseData = responseData.substring(indexS + START_FLAG.length(), indexEnd);
             }

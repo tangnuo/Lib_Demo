@@ -3,6 +3,7 @@ package com.caowj.lib_utils
 import android.os.Build
 import android.text.TextUtils
 import com.caowj.lib_utils.file.*
+import com.caowj.lib_utils.file.FilenameUtil
 import com.caowj.lib_utils.file.filter.*
 import com.caowj.lib_utils.file.output.NullOutputStream
 import java.io.*
@@ -2645,7 +2646,7 @@ object FileUtil {
         if (!rename) {
             copyFile(srcFile, destFile)
             if (!srcFile.delete()) {
-                FileUtil.deleteQuietly(destFile)
+                deleteQuietly(destFile)
                 throw IOException("Failed to delete original file '$srcFile' after copy to '$destFile'")
             }
         }

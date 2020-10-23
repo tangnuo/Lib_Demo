@@ -190,7 +190,7 @@ public class MultiImageView extends LinearLayout {
                 int rowOffset = rowCursor * MAX_PER_ROW_COUNT;// 行偏移
                 for (int columnCursor = 0; columnCursor < columnCount; columnCursor++) {
                     int position = columnCursor + rowOffset;//图片位置
-//                    LogUtil.myD("rowCursor:" + rowCursor + ",,rowOffset:" + rowOffset + ",,columnCursor:" + columnCursor + ",,position:" + position);
+//                    Log.d("caowj","rowCursor:" + rowCursor + ",,rowOffset:" + rowOffset + ",,columnCursor:" + columnCursor + ",,position:" + position);
                     rowLayout.addView(createImageView(position, true));
                 }
             }

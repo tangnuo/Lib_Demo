@@ -32,7 +32,7 @@ public class TimeTextView extends android.support.v7.widget.AppCompatTextView {
                 case 0:
                     if (run) {
                         long mTime = Time;
-//                        LogUtil.myD("倒计时时间差（秒）：" + Time);
+//                        Log.d("caowj","倒计时时间差（秒）：" + Time);
                         if (mTime > 0) {
                             TimeTextView.this.setText("倒计时    还有" + dateDiffDToSecond(Time, ","));
 //                            Time = Time - 1000;
@@ -118,7 +118,7 @@ public class TimeTextView extends android.support.v7.widget.AppCompatTextView {
         Time = mT - t2;
         date = null;
 
-//        LogUtil.myD("时间差：" + Time + run + "，当前时间：" + t2);
+//        Log.d("caowj","时间差：" + Time + run + "，当前时间：" + t2);
         if (Time > 0) {
             handler.removeMessages(0);
             handler.sendEmptyMessage(0);

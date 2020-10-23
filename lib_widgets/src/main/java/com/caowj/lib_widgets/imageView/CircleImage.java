@@ -1,4 +1,4 @@
-package com.caowj.lib_widgets;
+package com.caowj.lib_widgets.imageView;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,6 +7,8 @@ import android.graphics.Path;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
+
+import com.caowj.lib_widgets.R;
 
 /**
  * <pre>
@@ -54,12 +56,12 @@ public class CircleImage extends AppCompatImageView {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CircleImageView);
-        radius = array.getDimensionPixelOffset(R.styleable.CircleImageView_radius, defaultRadius);
-        leftTopRadius = array.getDimensionPixelOffset(R.styleable.CircleImageView_left_top_radius, defaultRadius);
-        rightTopRadius = array.getDimensionPixelOffset(R.styleable.CircleImageView_right_top_radius, defaultRadius);
-        rightBottomRadius = array.getDimensionPixelOffset(R.styleable.CircleImageView_right_bottom_radius, defaultRadius);
-        leftBottomRadius = array.getDimensionPixelOffset(R.styleable.CircleImageView_left_bottom_radius, defaultRadius);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CircleImage);
+        radius = array.getDimensionPixelOffset(R.styleable.CircleImage_radius, defaultRadius);
+        leftTopRadius = array.getDimensionPixelOffset(R.styleable.CircleImage_left_top_radius, defaultRadius);
+        rightTopRadius = array.getDimensionPixelOffset(R.styleable.CircleImage_right_top_radius, defaultRadius);
+        rightBottomRadius = array.getDimensionPixelOffset(R.styleable.CircleImage_right_bottom_radius, defaultRadius);
+        leftBottomRadius = array.getDimensionPixelOffset(R.styleable.CircleImage_left_bottom_radius, defaultRadius);
 
         if (leftTopRadius == defaultRadius) {
             leftTopRadius = radius;

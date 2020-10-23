@@ -1,4 +1,4 @@
-package com.caowj.lib_widgets;
+package com.caowj.lib_widgets.textView;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,6 +9,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
 import com.caowj.lib_utils.AndroidUtils;
+import com.caowj.lib_widgets.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

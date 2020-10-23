@@ -1,4 +1,4 @@
-package com.caowj.lib_widgets;
+package com.caowj.lib_widgets.imageView;
 
 import android.content.Context;
 import android.graphics.Bitmap;

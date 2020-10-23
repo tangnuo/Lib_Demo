@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="CircleImageView">
+    <declare-styleable name="CircleImage">
         <attr name="radius" format="dimension" />
         <attr name="left_top_radius" format="dimension" />
         <attr name="right_top_radius" format="dimension" />
@@ -16,4 +16,37 @@
         <attr format="color|reference" name="indicator_focus_color"/>
         <attr format="color|reference" name="indicator_color"/>
     </declare-styleable>
+
+
+    <declare-styleable name="CTTourHeaderScrollView">
+        <attr name="top_offset" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView2">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="commonTextLabel">
+        <attr name="leftImageDrawable" format="reference" />
+        <attr name="leftText" format="string|reference" />
+        <attr name="rightText" format="string|reference" />
+        <attr name="leftTextColor" format="reference|color" />
+        <attr name="rightTextColor" format="reference|color" />
+        <attr name="rightImageVisible" format="boolean" />
+        <attr name="leftTextLabelMargin" format="reference|dimension" />
+        <attr name="rightTextLabelMargin" format="reference|dimension" />
+        <attr name="leftTextSize" format="integer" />
+        <attr name="rightTextSize" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="StateImage">
+        <attr name="toggleImage" format="reference" />
+        <attr name="auto" format="boolean" />
+        <attr name="toggleState" format="boolean" />
+    </declare-styleable>
+
+
 </resources>

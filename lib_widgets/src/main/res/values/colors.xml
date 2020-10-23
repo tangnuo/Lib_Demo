@@ -66,4 +66,14 @@
     <color name="selected_day_background">#FC7347</color>
     <color name="selected_day_text">#fff2f2f2</color>
     <color name="crash_dialog_btn_bg_p">#fff0f0f0</color>
+    <!--    <color name="colorAccent">#FF4081</color>-->
+    <color name="transparent">#00000000</color>
+    <color name="grey_light">#EAEAEA</color>
+
+    <color name="colorGrayl">#d2cace</color>
+    <color name="warning_color">#f4511e</color>
+    <color name="hint_color">#42000000</color>
+    <color name="success_color">#009688</color>
+    <color name="grey300">#FFE0E0E0</color>
+
 </resources>

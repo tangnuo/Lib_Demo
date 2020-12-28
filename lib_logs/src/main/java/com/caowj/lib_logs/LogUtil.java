@@ -5,7 +5,7 @@ import android.util.Log;
 public class LogUtil {
     public static final String TAG = "caowj";
 
-    private static final boolean DEBUG = BuildConfig.DEBUG;
+    private static final boolean DEBUG = !BuildConfig.DEBUG;//发布之后都是false
     private static final int maxLength = 3500;
 
     public static void v(String msg) {

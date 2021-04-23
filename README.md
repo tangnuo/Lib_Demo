@@ -1,6 +1,9 @@
 # Lib_Demo
 Android开发常用工具类、控件等封装
 
+## 分支：
+- master：正在维护的分支，开源库发布到Maven Central；
+- dev_jcenter：包含发布开源库到JCenter的配置；代码不再同步。
 
 ## 模块介绍：
 

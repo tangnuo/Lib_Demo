@@ -1,4 +1,12 @@
+
+**补充说明：**
+
+由于2021年5月1日 ==jCenter即将关闭==，后续开源库会发布到Maven Central中。
+
+dev_jcenter分支包含开源库发布到jCenter仓库的配置，后续开源库**不再维护**，请参考master分支。
+
 # Lib_Demo
+
 Android开发常用工具类、控件等封装
 
 

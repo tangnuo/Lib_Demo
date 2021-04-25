@@ -1,10 +1,10 @@
-package com.caowj.lib_network;
+package com.caowj.lib_network.retrofit_sample;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.util.LruCache;
 
-import com.caowj.lib_network.net.HttpServiceApi;
+import com.caowj.lib_network.retrofit_sample.net.HttpServiceApi;
 import com.caowj.lib_network.retrofit.config.HttpClient;
 
 import retrofit2.Retrofit;

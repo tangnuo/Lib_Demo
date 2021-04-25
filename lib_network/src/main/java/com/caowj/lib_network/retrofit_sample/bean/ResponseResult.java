@@ -1,4 +1,4 @@
-package com.caowj.lib_network.bean;
+package com.caowj.lib_network.retrofit_sample.bean;
 
 /**
  * <pre>

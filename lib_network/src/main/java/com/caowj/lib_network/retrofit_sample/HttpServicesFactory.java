@@ -1,8 +1,8 @@
-package com.caowj.lib_network;
+package com.caowj.lib_network.retrofit_sample;
 
 import android.support.annotation.NonNull;
 
-import com.caowj.lib_network.net.HttpServiceApi;
+import com.caowj.lib_network.retrofit_sample.net.HttpServiceApi;
 import com.caowj.lib_network.retrofit.HttpRetrofitFactory;
 
 import java.util.concurrent.TimeUnit;

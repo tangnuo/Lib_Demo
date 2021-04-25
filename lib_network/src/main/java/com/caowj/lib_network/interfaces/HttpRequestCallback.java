@@ -3,8 +3,8 @@ package com.caowj.lib_network.interfaces;
 import android.arch.lifecycle.MutableLiveData;
 import android.util.Log;
 
-import com.caowj.lib_network.bean.HttpBaseResult;
-import com.caowj.lib_network.bean.ResponseResult;
+import com.caowj.lib_network.retrofit_sample.bean.HttpBaseResult;
+import com.caowj.lib_network.retrofit_sample.bean.ResponseResult;
 import com.caowj.lib_network.util.FileUtils;
 
 import java.net.ConnectException;

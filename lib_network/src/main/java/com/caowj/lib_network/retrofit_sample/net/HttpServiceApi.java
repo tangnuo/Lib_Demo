@@ -1,9 +1,5 @@
-package com.caowj.lib_network.net;
+package com.caowj.lib_network.retrofit_sample.net;
 
-
-import com.caowj.lib_network.bean.HttpBaseResult;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,4 +1,12 @@
 
+包含三种网络框架的封装：
+
+1、Retrofit的封装；
+    1.1、参考LegoArch
+    1.2、基于Retrofit2的简单使用
+2、volley的封装；
+3、OKHttp的封装；
+
 
 1、为什么没有Retrofit2的集成：
 

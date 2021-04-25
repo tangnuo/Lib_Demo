@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import com.caowj.lib_network.HttpServicesFactory
-import com.caowj.lib_network.HttpServicesFactory2
+import com.caowj.lib_network.retrofit_sample.HttpServicesFactory
+import com.caowj.lib_network.retrofit_sample.HttpServicesFactory2
 import com.caowj.lib_network.RequestFactory
 import com.caowj.lib_network.interfaces.IRequestCallback
 import com.caowj.library.R

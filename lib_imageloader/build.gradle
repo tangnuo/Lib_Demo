@@ -2,6 +2,12 @@ apply plugin: 'com.android.library'
 //apply plugin: 'kotlin-android'
 //apply plugin: 'kotlin-android-extensions'
 
+ext {
+    artifact = 'lib_imageloader'
+    libraryName = 'lib_imageloader'
+    libraryDescription = '图片加载库'
+    libraryVersion = '0.0.1'
+}
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
@@ -48,5 +54,7 @@ dependencies {
 
 //    //picasso
 //    api "com.squareup.picasso:picasso:2.5.2"
-
 }
+
+//放到最后
+apply from: "../maven-publish.gradle"

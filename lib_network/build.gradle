@@ -1,5 +1,12 @@
 apply plugin: 'com.android.library'
 
+ext {
+    artifact = 'lib_network'
+    libraryName = 'lib_network'
+    libraryDescription = '网络请求库'
+    libraryVersion = '0.0.1'
+}
+
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
@@ -49,5 +56,5 @@ dependencies {
 //    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 }
 
-//加在最后面
-apply from: "../bintray.gradle"
+//放到最后
+apply from: "../maven-publish.gradle"

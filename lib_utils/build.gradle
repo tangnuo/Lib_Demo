@@ -1,6 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+ext {
+    artifact = 'lib_utils'
+    libraryName = 'lib_utils'
+    libraryDescription = '常用工具类'
+    libraryVersion = '0.0.1'
+}
+
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
@@ -49,6 +56,5 @@ dependencies {
     api "com.google.code.gson:gson:2.8.6"
 }
 
-
-//加在最后面
-apply from: "../bintray.gradle"
+//放到最后
+apply from: "../maven-publish.gradle"

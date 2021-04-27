@@ -1,6 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-
+ext {
+    artifact = 'lib_widgets'
+    libraryName = 'lib_widgets'
+    libraryDescription = '常用的自定义组件'
+    libraryVersion = '0.0.1'
+}
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
@@ -37,5 +42,5 @@ dependencies {
     implementation project(path: ':lib_utils')
 }
 
-//加在最后面
-apply from: "../bintray.gradle"
+//放到最后
+apply from: "../maven-publish.gradle"
